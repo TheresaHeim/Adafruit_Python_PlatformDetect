@@ -1,5 +1,6 @@
 """Definition of chips."""
 AM33XX = "AM33XX"
+AM654 = "AM654"
 IMX8MX = "IMX8MX"
 BCM2XXX = "BCM2XXX"
 ESP8266 = "ESP8266"

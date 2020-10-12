@@ -133,7 +133,9 @@ class Board:
             board_id = self._udoo_id()
         elif chip_id == chips.STM32MP157:
             board_id = self._stm32mp1_id()
-
+        elif chip_id == chips.AM654:
+            board_id = self._siemens_iot2050_adv_id()
+            
         self._board_id = board_id
         return board_id
 
@@ -354,6 +356,14 @@ class Board:
         board = None
         if board_value and "ASUS Tinker Board" in board_value:
             board = boards._ASUS_TINKER_BOARD_IDS
+        return board
+
+    def _siemens_iot2050_adv_id(self):
+        """Check what type of IOT2050."""
+        board_value = self.detector.get_device_model()
+        board = None
+        if "SIMATIC IOT2050-ADVANCED" in board_value.lower():
+            board = boards.SIE_IOT2050_ADV
         return board
 
     @property

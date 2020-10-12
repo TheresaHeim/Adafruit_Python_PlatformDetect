@@ -132,6 +132,9 @@ class Chip:
         # pylint: disable=too-many-return-statements
         """Attempt to detect the CPU on a computer running the Linux kernel."""
 
+        if self.detector.check_dt_compatible_value("siemens,am654-iot2050ti,am654"):
+            return chips.AM654
+
         if self.detector.check_dt_compatible_value("qcom,apq8016"):
             return chips.APQ8016
 
