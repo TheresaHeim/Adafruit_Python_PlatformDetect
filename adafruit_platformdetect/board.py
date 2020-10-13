@@ -506,6 +506,11 @@ class Board:
         """Check whether the current board is a GreatFET One."""
         return self.id == boards.GREATFET_ONE
 
+    @property
+    def any_siemens_iot2000(self):
+        """Check whether the current board is a Siemens SIMATIC IOT2000 family board."""
+        return self.id == boards.SIE_IOT2050_ADV
+
     def __getattr__(self, attr):
         """
         Detect whether the given attribute is the currently-detected board.  See list
