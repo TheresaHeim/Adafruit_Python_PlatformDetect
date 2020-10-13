@@ -362,7 +362,7 @@ class Board:
         """Check what type of IOT2050."""
         board_value = self.detector.get_device_model()
         board = None
-        if "SIMATIC IOT2050-ADVANCED" in board_value.lower():
+        if "SIMATIC IOT2050-ADVANCED\x00" in board_value.lower():
             board = boards.SIE_IOT2050_ADV
         return board
 
