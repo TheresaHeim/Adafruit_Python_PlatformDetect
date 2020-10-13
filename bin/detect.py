@@ -8,7 +8,7 @@ print("Chip id: ", detector.chip.id)
 print("Board id: ", detector.board.id)
 print()
 
-print("is this a Siemens IOT2050 Advanced?", detector.board.SIE_IOT2050_ADV)
+print("is this a Siemens IOT2000?", detector.board.any_siemens_iot2000)
 print("Is this a DragonBoard 410c?", detector.board.DRAGONBOARD_410C)
 print("Is this a Pi 3B+?", detector.board.RASPBERRY_PI_3B_PLUS)
 print("Is this a Pi 4B?", detector.board.RASPBERRY_PI_4B)
