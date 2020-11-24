@@ -1,3 +1,4 @@
+
 """Definition of boards and/or ids"""
 # Allow for aligned constant definitions:
 BEAGLEBONE = "BEAGLEBONE"
@@ -107,7 +108,7 @@ UDOO_BOLT_V3 = "UDOO_BOLT_V3"
 UDOO_BOLT_V8 = "UDOO_BOLT_V8"
 UDOO_X86 = "UDOO_X86"
 
-# SIEMENS SIMATIC IOT2000 
+# SIEMENS SIMATIC IOT2000
 SIE_IOT2050_ADV = "SIMATIC_IOT2050_ADVANCED"
 
 # Asus Tinkerboard
