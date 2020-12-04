@@ -52,7 +52,8 @@ class Board:
         self.detector = detector
         self._board_id = None
 
-    # pylint: disable=invalid-name, protected-access
+    # pylint: disable=invalid-name, protected-acces
+    
     @property
     def id(self):
         """Return a unique id for the detected board, if any."""
@@ -365,6 +366,11 @@ class Board:
         if "SIMATIC IOT2050-ADVANCED\x00" in board_value:
             board = boards.SIE_IOT2050_ADV
         return board
+
+    @property
+    def any_siemens_iot2000(self):
+        """Check whether the current board is any defined Giant Board."""
+        return self.GIANT_BOARD 
 
     @property
     def any_96boards(self):
